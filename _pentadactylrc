@@ -6,4 +6,9 @@ set guioptions=bCrsmTn
 set hintinputs=label,value,name
 set hintkeys=asdfg;lkjh
 
+" solarized color theme in submodule
+set runtimepath+=~/pentadactyl/colors/solarized
+
+colorscheme solarized-dark
+
 " set strictfocus='chrome:*':laissez-faire,*:despotic 
