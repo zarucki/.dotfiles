@@ -1,0 +1,9 @@
+"1.0rc1
+
+loadplugins '\.(js|penta)$'
+group user
+set guioptions=bCrsmTn
+set hintinputs=label,value,name
+set hintkeys=asdfg;lkjh
+
+" set strictfocus='chrome:*':laissez-faire,*:despotic 

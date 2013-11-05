@@ -1,0 +1,50 @@
+set ignorecase
+set smartcase
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set incsearch
+
+let mapleader=","
+
+nmap <C-]> :vsc Edit.GoToDefinition<CR>
+" nmap <S-]> :vsc Edit.FindAllReferences<CR>
+nmap <C-n> :vsc Edit.GoToNextLocation<CR>
+nmap <C-p> :vsc Edit.GoToPrevLocation<CR>
+nmap <leader>o :vsc File.OpenContainingFolder<CR>
+nmap <leader>h :vsc EditorContextMenus.CodeWindow.ViewCallHierarchy<CR>
+nmap <leader>r :vsc Edit.FindAllReferences<CR>
+" open current file in vim
+nmap <leader>v :vsc Tools.ExternalCommand1<CR>
+" run kdiff with this and base
+nmap <leader>d :vsc Tools.ExternalCommand2<CR>
+nmap <leader>c :vsc File.CloseAllButThis<CR>
+nmap <leader>C :vsc Edit.UndoClose<CR>
+nmap <leader>t :vsc Window.PinTab<CR>
+nnoremap <leader>w :w<CR>
+imap <C-w> <ESC>:w<CR>
+nnoremap Q :q<CR>
+
+" so pasting doesn't change working register
+vmap p "_dP
+nmap <leader>p o<ESC>p
+
+nmap Y y$
+nnoremap <Space> <C-d>
+nnoremap <S-Space> <C-u>
+" Because i constantly miss C-[ when trying to exit insert mode
+imap <C-]> <C-[>
+
+" dpack extension for visual studio required
+map <leader>q :vsc OtherContextMenus.EasyMDIDocumentWindow.DPack.Misc.LocateInSolutionExplorer<CR>
+
+" zencoding extension required
+" map <leader>zz :vsc ZenCoding.ExpandZen<CR>
+" doesn't work with visual mode map <leader>zw :vsc ZenCoding.WrapwithZen<CR>
+
+" Enter working just as in insert in normal
+nnoremap <CR> a<CR><ESC>k$
+nnoremap <S-CR> i<CR><ESC>k$
+
+set clipboard=unnamed
