@@ -7,7 +7,7 @@ set hintkeys=asdfg;lkjh
 colorscheme solarized/colors/solarized-dark
 
 " with monospace font set to Consolas
-hi FontFixed -append font-size: 14pt !important;
+hi FontFixed -append font-size: 12pt !important;
 " some groups -- such as `CmdLine` and `StatusLine` -- are linked by default
 hi -append -link FontFixed CompItem
 hi -append -link FontFixed CompTitle
@@ -17,6 +17,11 @@ hi Hint -append font-size: 12pt !important;
 " moving tabs around
 map < :tabm -1<cr>
 map > :tabm +1<cr>
+
+vmap y <C-v><C-c>
+
+set strictfocus=*:despotic
+set hinttags+=a
 
 " set strictfocus='chrome:*':laissez-faire,*:despotic 
 " vim: set ft=pentadactyl:
