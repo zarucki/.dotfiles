@@ -18,7 +18,7 @@ hi Hint -append font-size: 12pt !important;
 map < :tabm -1<cr>
 map > :tabm +1<cr>
 
-vmap y <C-v><C-c>
+vmap y <C-v><C-c><Esc><Esc>
 
 set strictfocus=*:despotic
 set hinttags+=a
