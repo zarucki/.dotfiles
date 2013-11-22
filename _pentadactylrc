@@ -23,5 +23,10 @@ vmap y <C-v><C-c>
 set strictfocus=*:despotic
 set hinttags+=a
 
+noremap j 10j
+noremap k 10k
+noremap J 25j
+noremap K 25k
+
 " set strictfocus='chrome:*':laissez-faire,*:despotic 
 " vim: set ft=pentadactyl:
