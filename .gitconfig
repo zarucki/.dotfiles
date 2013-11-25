@@ -12,3 +12,6 @@
     path = C:/Program Files (x86)/KDiff3/kdiff3.exe
     keepBackup = true
     trustExitCode = false
+
+[core]
+	editor = 'E:/Program Files (x86)/Vim/vim73/gvim.exe'
