@@ -1,0 +1,14 @@
+[user]
+	name = zarucki\n
+	email = zarucki@gmail.com\n
+
+[diff]
+    tool = kdiff3
+
+[merge]
+    tool = kdiff3
+
+[mergetool "kdiff3"]
+    path = C:/Program Files (x86)/KDiff3/kdiff3.exe
+    keepBackup = true
+    trustExitCode = false
