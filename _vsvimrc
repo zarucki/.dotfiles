@@ -33,6 +33,9 @@ nmap <leader>p o<ESC>p
 nmap Y y$
 nnoremap <Space> <C-d>
 nnoremap <S-Space> <C-u>
+nnoremap ' `
+nnoremap ` '
+
 " Because i constantly miss C-[ when trying to exit insert mode
 imap <C-]> <C-[>
 
