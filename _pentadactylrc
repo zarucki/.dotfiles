@@ -27,6 +27,8 @@ noremap j 10j
 noremap k 10k
 noremap J 25j
 noremap K 25k
+noremap h <C-p>
+noremap l <C-n>
 
 imap -builtin <C-n> <A-Down>
 imap -builtin <C-p> <A-Up>
