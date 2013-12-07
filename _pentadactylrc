@@ -32,6 +32,8 @@ noremap l <C-n>
 
 imap -builtin <C-n> <A-Down>
 imap -builtin <C-p> <A-Up>
+imap -builtin <C-j> <Down>
+imap -builtin <C-k> <Up>
 
 " set strictfocus='chrome:*':laissez-faire,*:despotic 
 " vim: set ft=pentadactyl:
