@@ -23,12 +23,12 @@ vmap y <C-v><C-c><Esc><Esc>
 set strictfocus=*:despotic
 set hinttags+=a
 
-noremap j 10j
-noremap k 10k
-noremap J 25j
-noremap K 25k
-noremap h <C-p>
-noremap l <C-n>
+nmap -builtin j 10j
+nmap -builtin k 10k
+nmap -builtin J 25j
+nmap -builtin K 25k
+nmap -builtin h <C-p>
+nmap -builtin l <C-n>
 
 imap -builtin <C-n> <A-Down>
 imap -builtin <C-p> <A-Up>
