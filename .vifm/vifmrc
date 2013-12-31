@@ -1,3 +1,4 @@
+" vim: filetype=vifm :
 " Show list of matches on tab completion in command-line mode
 set wildmenu
 set ignorecase
@@ -7,3 +8,9 @@ set incsearch
 
 " Try to leave some space from cursor to upper/lower border in lists
 set scrolloff=6
+
+" Use vim help file instead of the .txt file
+set vimhelp
+
+" Move files temporary to trash directory
+set trash
