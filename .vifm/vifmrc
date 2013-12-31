@@ -1,0 +1,9 @@
+" Show list of matches on tab completion in command-line mode
+set wildmenu
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch
+
+" Try to leave some space from cursor to upper/lower border in lists
+set scrolloff=6
