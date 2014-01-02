@@ -14,3 +14,43 @@ set vimhelp
 
 " Move files temporary to trash directory
 set trash
+
+" If you would like to run an executable file when you
+" press return on the file name set this.
+set runexec
+
+mark d ~/Desktop/
+
+"The command macros may be used in user commands.
+" %" wrapes in double quotes
+"  %a        user arguments.  When user arguments contain macros, they are
+"            expanded before preforming substitution of %a.
+"  %c  %"c   the current file under the cursor.
+"  %C  %"C   the current file under the cursor in the other directory.
+"  %f  %"f   all of the selected files.
+"  %F  %"F   all of the selected files in the other directory list.
+"  %b  %"b   same as %f %F.
+"  %d  %"d   full path to current directory.
+"  %D  %"D   full path to other file list directory.
+"  %rx %"rx  full paths to files in the register {x}.  In case of invalid
+"            symbol in place of {x}, it's processed with the rest of the
+"            line and default register is used.
+"  %m        show command output in a menu.
+"  %M        same as %m, but l (or Enter) key is handled like for :locate
+"            and :find commands.
+"  %S        show command output in the status bar.
+"  %s        execute command in split window of active terminal
+"            multiplexer (ignored if not running inside one).
+"  %i        completely ignore command output.
+
+"we need second quotes to escape that
+nmap <cr> :!cmd /c "%"c" &<cr>
+"for some reason it needs space at the end
+nmap ,v :!!gvim --remote-silent %"c & <cr>
+
+" Tortoise mappings
+nmap tu :!tortoiseproc /command:update /path:%"d &<cr>
+nmap tc :!tortoiseproc /command:commit /path:%"c &<cr>
+nmap tl :!tortoiseproc /command:log /path:%"c &<cr>
+nmap tb :!tortoiseproc /command:blame /path:%"c &<cr>
+nmap ts :!tortoiseproc /command:repostatus /path:%"c &<cr>
