@@ -49,8 +49,11 @@ nmap <cr> :!cmd /c "%"c" &<cr>
 nmap ,v :!!gvim --remote-silent %"c & <cr>
 
 " Tortoise mappings
-nmap tu :!tortoiseproc /command:update /path:%"d &<cr>
+nmap tu :!tortoiseproc /command:update /path:%"c &<cr>
 nmap tc :!tortoiseproc /command:commit /path:%"c &<cr>
 nmap tl :!tortoiseproc /command:log /path:%"c &<cr>
 nmap tb :!tortoiseproc /command:blame /path:%"c &<cr>
 nmap ts :!tortoiseproc /command:repostatus /path:%"c &<cr>
+nmap td :!tortoiseproc /command:cleanup /path:%"c &<cr>
+
+nmap ,z :!7z.exe x -o%"c:r %"c %i &<cr>
