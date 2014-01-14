@@ -47,6 +47,7 @@ mark d ~/Desktop/
 nmap <cr> :!cmd /c "%"c" &<cr>
 " for some reason it needs space at the end
 nmap ,v :!gvim --remote-silent %"c & <cr>
+nmap ,e :!explorer %"c &<cr>
 
 " Tortoise mappings
 nmap tu :!tortoiseproc /command:update /path:%"c &<cr>
