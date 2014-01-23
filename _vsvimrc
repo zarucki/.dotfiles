@@ -9,22 +9,27 @@ set incsearch
 let mapleader=","
 
 nmap <C-]> :vsc Edit.GoToDefinition<CR>
-" nmap <S-]> :vsc Edit.FindAllReferences<CR>
 nmap <C-n> :vsc Edit.GoToNextLocation<CR>
 nmap <C-p> :vsc Edit.GoToPrevLocation<CR>
 nmap <leader>o :vsc File.OpenContainingFolder<CR>
 nmap <leader>h :vsc EditorContextMenus.CodeWindow.ViewCallHierarchy<CR>
 nmap <leader>r :vsc Edit.FindAllReferences<CR>
+nmap <leader>c :vsc File.CloseAllButThis<CR>
+nmap <leader>C :vsc Edit.UndoClose<CR>
+nmap <leader>t :vsc Window.PinTab<CR>
+nmap <leader>b :vsc Build.BuildSolution<CR>
+nmap <leader>B :vsc Build.RebuildSolution<CR>
+nmap <leader>s :vsc Debug.StartWithoutDebugging<CR>
+nmap <leader>S :vsc Debug.Start<CR>
+nmap <leader>e :vsc View.ErrorList<CR>
+nnoremap <leader>w :w<CR>
+imap <C-w> <ESC>:w<CR>
+nnoremap Q :q<CR>
+
 " open current file in vim
 nmap <leader>v :vsc Tools.ExternalCommand1<CR>
 " run kdiff with this and base
 nmap <leader>d :vsc Tools.ExternalCommand2<CR>
-nmap <leader>c :vsc File.CloseAllButThis<CR>
-nmap <leader>C :vsc Edit.UndoClose<CR>
-nmap <leader>t :vsc Window.PinTab<CR>
-nnoremap <leader>w :w<CR>
-imap <C-w> <ESC>:w<CR>
-nnoremap Q :q<CR>
 
 " so pasting doesn't change working register
 vmap p "_dP
