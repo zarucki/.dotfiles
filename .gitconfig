@@ -37,7 +37,7 @@
     undo-commit = reset --soft HEAD^
     ready = rebase -i @{u}
 
-    l = log --graph --all --format=format:'%C(bold blue)%h%C(reset)\
+    l = log --graph --all --format=format:'%C(bold yellow)%h%C(reset)\
         - %C(bold green)(%ar)%C(reset) %C(bold red)%d%C(reset)\
         %C(white)%s%C(reset)'\
         --abbrev-commit --date=relative
