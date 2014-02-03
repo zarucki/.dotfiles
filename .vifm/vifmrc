@@ -9,6 +9,13 @@ set incsearch
 " Try to leave some space from cursor to upper/lower border in lists
 set scrolloff=6
 
+set history=100
+set sortnumbers
+set undolevels=100
+set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,phistory,dirstack,registers,bookmarks
+
+set statusline="  %t%= %A %10u:%-7g %15s %20d  "
+
 " Use vim help file instead of the .txt file
 set vimhelp
 
@@ -57,5 +64,34 @@ nmap tb :!tortoiseproc /command:blame /path:%"c &<cr>
 nmap ts :!tortoiseproc /command:repostatus /path:%"c &<cr>
 nmap td :!tortoiseproc /command:cleanup /path:%"c &<cr>
 nmap tw :!tortoiseproc /command:switch /path:%"c &<cr>
+
+" make directory shortcut
+nmap <c-n> :mkdir<space>
+" Yank current directory path into the clipboard
+nmap yd :!echo %d | clip %i<cr>
+" Yank current file path into the clipboard
+nmap yf :!echo %c:p | clip %i<cr>
+" copy over file to adjacent side
+nmap <c-y> yy<c-w>wp
+" move
+nmap <c-c> dd<c-w>wp
+" Mappings for faster renaming
+nmap I cw<c-a>
+nmap cc cw<c-u>
+nmap A cw<c-w>
+
+nmap S :sort<cr>
+nmap s :sort<cr>
+
+nmap ,b :marks<cr>
+
+nmap <c-j> <C-W>j
+nmap <c-k> <C-W>k
+nmap <c-l> <C-W>l
+nmap <c-h> <C-W>h
+
+" swap screens
+nmap <c-w>o <C-W>x
+nmap w :view<cr>
 
 nmap ,z :!7z.exe x -o%"c:r %"c %i &<cr>
