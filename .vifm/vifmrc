@@ -64,6 +64,7 @@ nmap tb :!tortoiseproc /command:blame /path:%"c &<cr>
 nmap ts :!tortoiseproc /command:repostatus /path:%"c &<cr>
 nmap td :!tortoiseproc /command:cleanup /path:%"c &<cr>
 nmap tw :!tortoiseproc /command:switch /path:%"c &<cr>
+nmap tr :!tortoiseproc /command:remove /path:%"c &<cr>
 
 " make directory shortcut
 nmap <c-n> :mkdir<space>
