@@ -26,7 +26,7 @@ set trash
 " press return on the file name set this.
 set runexec
 
-mark d ~/Desktop/
+mark d ~/Desktop/desktop
 
 "The command macros may be used in user commands.
 " %" wrapes in double quotes
@@ -69,9 +69,9 @@ nmap tr :!tortoiseproc /command:remove /path:%"c &<cr>
 " make directory shortcut
 nmap <c-n> :mkdir<space>
 " Yank current directory path into the clipboard
-nmap yd :!echo %d | clip %i<cr>
+nmap yd :!echo %"d | clip %i<cr>
 " Yank current file path into the clipboard
-nmap yf :!echo %c:p | clip %i<cr>
+nmap yf :!echo %"c:p | clip %i<cr>
 " copy over file to adjacent side
 nmap <c-y> yy<c-w>wp
 " move
