@@ -1,6 +1,6 @@
 [user]
-    name = zarucki
-    email = zarucki@gmail.com
+	name = zarucki
+	email = zarucki@gmail.com
 
 [diff]
     tool = kdiff3
@@ -15,6 +15,7 @@
 
 [core]
     editor = 'E:/Program Files (x86)/Vim/vim73/gvim.exe'
+	autocrlf = true
 
 [alias]
     aa = add -A
@@ -27,6 +28,7 @@
     fe = fetch
     me = merge
     st = status -sb
+    amend = commit --amend --no-edit
 
     puff = pull --ff-only
     purr = pull --rebase
