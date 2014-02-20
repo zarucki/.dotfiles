@@ -16,6 +16,7 @@
 [core]
     editor = 'E:/Program Files (x86)/Vim/vim73/gvim.exe'
 	autocrlf = true
+	pager = less -+S
 
 [alias]
     aa = add -A
@@ -38,11 +39,12 @@
     unstage = reset HEAD
     undo-commit = reset --soft HEAD^
     ready = rebase -i @{u}
+    ignore = update-index --assume-unchanged
+    ignored = ! git ls-files -v | grep '^[a-z]'
+    unignore = update-index --no-assume-unchanged
 
-    l = log --graph --all --format=format:'%C(bold yellow)%h%C(reset)\
-        - %C(bold green)(%ar)%C(reset) %C(bold red)%d%C(reset)\
-        %C(white)%s%C(reset)'\
-        --abbrev-commit --date=relative
+    l = log --graph --all --format=format:'%C(bold yellow)%h%C(reset) - %C(bold green)(%ad)%C(reset) %C(bold red)%d%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)'\
+        --abbrev-commit --date=local
 
 [color]
     ui = true
