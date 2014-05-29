@@ -20,7 +20,7 @@ map > :tabm +1<cr>
 
 vmap y <C-v><C-c><Esc><Esc>
 
-set strictfocus=*:despotic
+"set strictfocus=*:despotic
 set hinttags+=a
 
 nmap -builtin j 10j
